@@ -1,0 +1,77 @@
+import numpy as np
+from pydub import AudioSegment
+import wave
+
+# ---------- CONFIG ----------
+sample_rate = 44100
+tempo_bpm = 80
+seconds_per_beat = 60.0 / tempo_bpm
+seconds_per_bar = 4 * seconds_per_beat  # 4/4
+bars_per_loop = 8
+loop_count = 25  # ~10 minutes
+
+# Chord tones in Hz (A4 = 440)
+def note(freq_ratio, base=440.0):
+    return base * freq_ratio
+
+# Equal temperament ratios from A4
+# We'll define notes by semitone offsets from A4
+def hz_from_midi(midi):
+    return 440.0 * (2 ** ((midi - 69) / 12.0))
+
+# Chord definitions as MIDI note numbers (root position, simple voicing)
+chords = {
+    "Em(add9)": [52, 55, 59, 62],   # E2 G2 B2 D3
+    "Gmaj7":    [55, 59, 62, 66],   # G2 B2 D3 F#3
+    "A(add4)":  [57, 60, 64, 67],   # A2 C3 E3 G3
+    "Bsus2":    [59, 62, 66],       # B2 D3 F#3
+    "Cmaj7":    [60, 64, 67, 71],   # C3 E3 G3 B3
+    "D(add9)":  [62, 66, 69, 74],   # D3 F#3 A3 C#4
+    "Em":       [52, 55, 59],       # E2 G2 B2
+    "F#sus2":   [54, 61, 66],       # F#2 C#3 F#3
+}
+
+progression = [
+    "Em(add9)", "Gmaj7", "A(add4)", "Bsus2",
+    "Cmaj7", "D(add9)", "Em", "F#sus2"
+]
+
+def synth_chord(chord_name, duration, sr=sample_rate):
+    midi_notes = chords[chord_name]
+    t = np.linspace(0, duration, int(sr * duration), endpoint=False)
+    signal = np.zeros_like(t)
+    for m in midi_notes:
+        freq = hz_from_midi(m)
+        signal += 0.33 * np.sin(2 * np.pi * freq * t)
+    # gentle fade in/out
+    fade_len = int(0.02 * sr)
+    fade = np.linspace(0, 1, fade_len)
+    signal[:fade_len] *= fade
+    signal[-fade_len:] *= fade[::-1]
+    # normalize
+    signal /= np.max(np.abs(signal) + 1e-9)
+    return signal
+
+# Build full track
+bars_audio = []
+for _ in range(loop_count):
+    for chord_name in progression:
+        bars_audio.append(synth_chord(chord_name, seconds_per_bar))
+
+track = np.concatenate(bars_audio)
+track_int16 = (track * 32767).astype(np.int16)
+
+# Write WAV
+wav_path = "golden_path.wav"
+with wave.open(wav_path, "w") as wf:
+    wf.setnchannels(1)
+    wf.setsampwidth(2)
+    wf.setframerate(sample_rate)
+    wf.writeframes(track_int16.tobytes())
+
+# Convert to MP3 (requires ffmpeg installed)
+mp3_path = "golden_path.mp3"
+audio = AudioSegment.from_wav(wav_path)
+audio.export(mp3_path, format="mp3")
+
+print("Rendered:", mp3_path)
