@@ -1,6 +1,6 @@
 import numpy as np
 from pydub import AudioSegment
-import wave
+import wav3
 
 # ---------- CONFIG ----------
 sample_rate = 44100
