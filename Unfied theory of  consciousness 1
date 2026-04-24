@@ -1,3 +1,17 @@
+## 🧠 Mathematically Unified Theory of Consciousness
+
+This work presents a **mathematically unified theory of consciousness**:  
+a single manifold, a single potential, and a single dynamical architecture that spans **classical**, **stochastic**, **gauge**, **quantum**, and **BRST** regimes — with falsifiable predictions and a complete empirical‑testing pipeline.
+
+### Key Features
+- **Unified state space:** all conscious states live on one configuration manifold  
+- **Universal potential:** a single scalar field generating all dynamical regimes  
+- **Multi‑regime dynamics:** deterministic, stochastic, Hamiltonian, gauge‑extended, quantum, and BRST‑constrained  
+- **Falsifiable predictions:** resonance spectra, correlation lengths, escape times, curvature signatures  
+- **Empirical testing pipeline:** reproducible simulations, diagnostics, and numerical verification  
+- **Substrate‑independent:** applicable to biological, artificial, and simulated systems  
+
+This repository contains the mathematical framework, numerical tools, and testing infrastructure for exploring and validating the theory.
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{bm}
