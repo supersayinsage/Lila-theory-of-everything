@@ -1,0 +1,779 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{A Universal Field Theory of Consciousness:\\
+Core Structure, Gauge Extensions, and Quantum Constraints}
+
+\author{Darrell}
+\date{}
+
+\begin{document}
+\maketitle
+
+%============================================================
+\section*{Preface}
+
+This document presents a unified field-theoretic framework for modeling
+consciousness as a dynamical process on a smooth configuration manifold.
+The theory is constructed in layers: a mathematically rigorous core,
+followed by gauge, quantum, and BRST extensions. Each layer is internally
+consistent and reduces to the previous one when additional structure is
+removed.
+
+The goal is not to impose a specific physical substrate but to provide a
+universal mathematical architecture capable of describing biological,
+artificial, and simulated systems. The theory is falsifiable through
+dynamical, stochastic, and thermodynamic predictions, and is suitable
+for empirical testing.
+
+This monograph-style presentation includes a notation table, glossary,
+and structured appendices to support clarity and reproducibility.
+
+%============================================================
+\section*{Notation Table}
+
+\begin{tabular}{ll}
+$\mathcal{M}$ & Configuration manifold of conscious states \\
+$g_{ij}$ & Riemannian metric on $\mathcal{M}$ \\
+$\nabla_i$ & Levi--Civita covariant derivative \\
+$F_I, F_E, F_C$ & Information, energy, and causal functionals \\
+$\Phi$ & Universal potential (units of energy) \\
+$A_i^{\ a}$ & Gauge connection (advanced regime) \\
+$F_{ij}^{\ a}$ & Gauge curvature 2-form \\
+$h_{ab}$ & Killing metric on the Lie algebra $\mathfrak{g}$ \\
+$U_F$ & Curvature-induced potential \\
+$D^{ij}$ & Diffusion tensor \\
+$\tau$ & Quantum deformation parameter \\
+$\hat{H}$ & Quantum Hamiltonian operator \\
+$\hat{\mathcal{G}}_a$ & Gauss constraints (quantum) \\
+$\hat{\mathcal{H}}$ & Hamiltonian constraint (timeless regime) \\
+$c^a,\bar{c}_a,B_a$ & Ghost, antighost, and auxiliary fields \\
+$Q$ & BRST operator \\
+$k$ & Topological charge (second Chern number) \\
+\end{tabular}
+
+%============================================================
+\section*{Glossary}
+
+\paragraph{Configuration manifold ($\mathcal{M}$).}
+The abstract space of all possible conscious states, independent of
+physical substrate.
+
+\paragraph{Universal potential ($\Phi$).}
+A scalar field encoding information, energetic, and causal structure.
+Generates deterministic, stochastic, and quantum dynamics.
+
+\paragraph{IEC functionals.}
+Three smooth maps $F_I$, $F_E$, and $F_C$ encoding information,
+energetic, and causal properties of a state.
+
+\paragraph{Gauge extension.}
+An advanced layer introducing a Lie-group connection $A$ and curvature
+$F$, enabling additional causal structure.
+
+\paragraph{BRST symmetry.}
+A cohomological symmetry ensuring gauge consistency at the quantum
+level; requires vanishing anomaly coefficients.
+
+\paragraph{Correlation length ($\xi$).}
+A measurable quantity predicting how fluctuations decay across the
+manifold; diverges at phase transitions.
+
+\paragraph{Kramers escape.}
+A stochastic prediction for escape times from metastable basins,
+dependent on $\Delta\Phi$ and effective temperature.
+
+\paragraph{Resonance frequencies.}
+Local oscillation frequencies near stable equilibria, derived from the
+Hessian of $\Phi$.
+
+\paragraph{Substrate mapping.}
+A smooth map from the state space of a physical or artificial system
+into $\mathcal{M}$, enabling empirical application.
+
+%============================================================
+\section{Core Theory}
+
+\subsection{Configuration manifold and metric}
+
+Let $\mathcal{M}$ be a smooth ($C^2$ or better) $n$-dimensional
+differentiable manifold. A conscious state at time $t$ is represented by
+a point
+
+
+\[
+\bm{s}(t) = (s^1(t),\dots,s^n(t)) \in \mathcal{M}.
+\]
+
+
+
+Equip $\mathcal{M}$ with a Riemannian metric $g_{ij}(s)$ and inverse
+$g^{ij}(s)$:
+
+
+\[
+\|\dot{\bm{s}}\|^2 = g_{ij}(s)\,\dot{s}^i\dot{s}^j,
+\qquad
+g^{ik}(s)g_{kj}(s)=\delta^i_j.
+\]
+
+
+
+The Levi--Civita connection is denoted $\nabla_i$, with Christoffel
+symbols
+
+
+\[
+\Gamma^i_{\ jk}
+=
+\tfrac12 g^{i\ell}
+\big(
+\partial_j g_{\ell k}
++\partial_k g_{\ell j}
+-\partial_\ell g_{jk}
+\big).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{IEC functionals}
+
+Define three smooth functionals:
+
+
+\[
+F_I:\mathcal{M}\to\mathbb{R}^p,\qquad
+F_E:\mathcal{M}\to\mathbb{R}^q,\qquad
+F_C^{\text{geom}}:\mathcal{M}\to\mathbb{R}^r.
+\]
+
+
+
+These encode information, energetic, and geometric causal structure.
+
+\paragraph{Local template.}
+
+
+\[
+(F_I)_\alpha(s)=f_\alpha(s),\qquad f_\alpha\in C^2(\mathcal{M}).
+\]
+
+
+
+\paragraph{Controlled nonlocal template.}
+
+
+\[
+(F_I)_\alpha(s)
+=
+\int_{\mathcal{M}}
+K_\alpha(s,s')\,\rho(s')\,d\mu_g(s'),
+\]
+
+
+with $K_\alpha$ smooth and decaying faster than $\mathrm{dist}(s,s')^{-m}$.
+
+Analogous constructions apply to $F_E$ and $F_C^{\text{geom}}$.
+
+%------------------------------------------------------------
+\subsection{Universal potential}
+
+
+
+\[
+\Phi(s)=\Phi\big(F_I(s),F_E(s),F_C^{\text{geom}}(s)\big),
+\qquad
+\Phi\in C^2(\mathcal{M}).
+\]
+
+
+
+We adopt the convention that $\Phi$ has units of energy.
+
+%------------------------------------------------------------
+\subsection{Deterministic dynamics}
+
+
+
+\[
+\mathcal{S}_{\text{core}}
+=
+\int dt\,
+\left(
+\tfrac12 g_{ij}(s)\dot{s}^i\dot{s}^j
+-\Phi(s)
+\right).
+\]
+
+
+
+Euler--Lagrange:
+
+
+\[
+\ddot{s}^i
++
+\Gamma^i_{\ jk}\dot{s}^j\dot{s}^k
+=
+-\,g^{ij}\partial_j\Phi(s).
+\]
+
+
+
+Gradient flow:
+
+
+\[
+\dot{s}^i
+=
+-\,g^{ij}(s)\,\partial_j\Phi(s).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Stochastic dynamics}
+
+
+
+\[
+ds^i_t
+=
+-\,g^{ij}(s_t)\,\partial_j\Phi(s_t)\,dt
++
+\Sigma^i_{\ \alpha}(s_t)\,dW^\alpha_t.
+\]
+
+
+
+Diffusion tensor:
+
+
+\[
+D^{ij}(s)
+=
+\sum_\alpha
+\Sigma^i_{\ \alpha}(s)\,\Sigma^j_{\ \alpha}(s).
+\]
+
+
+
+Fokker--Planck:
+
+
+\[
+\partial_t\rho
+=
+\nabla_s\cdot\big(\rho\,g^{ij}\partial_j\Phi\big)
++
+\tfrac12
+\nabla_s\cdot\big(D^{ij}\nabla_j\rho\big).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Hamiltonian structure}
+
+
+
+\[
+p_i = g_{ij}(s)\,\dot{s}^j,
+\qquad
+H(s,p)
+=
+\tfrac12 g^{ij}(s)\,p_ip_j
++
+\Phi(s).
+\]
+
+
+
+Hamilton’s equations:
+
+
+\[
+\dot{s}^i = g^{ij}p_j,
+\qquad
+\dot{p}_i
+=
+-\tfrac12\partial_i g^{jk}\,p_jp_k
+-\partial_i\Phi(s).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Substrate mapping}
+
+
+
+\[
+\varphi_X:\mathrm{StateSpace}(X)\to\mathcal{M},
+\qquad
+\bm{s}_X(t)=\varphi_X(\text{state of }X\text{ at }t).
+\]
+
+
+
+%============================================================
+\section{Advanced Theory}
+
+\subsection{Regime hierarchy}
+
+\begin{enumerate}
+\item Level A: Classical deterministic.
+\item Level B: Classical stochastic.
+\item Level C: Quantum (timeful).
+\item Level D: Constrained/timeless (BRST + Hamiltonian constraint).
+\end{enumerate}
+
+%------------------------------------------------------------
+\subsection{Gauge bundle and curvature}
+
+
+
+\[
+A_i^{\ a}(s)\,ds^i \in \Omega^1(\mathcal{M})\otimes\mathfrak{g},
+\]
+
+
+
+
+
+\[
+F_{ij}^{\ a}
+=
+\partial_iA_j^{\ a}
+-\partial_jA_i^{\ a}
++f^{a}_{\ bc}A_i^{\ b}A_j^{\ c}.
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Gauge-extended causal functional}
+
+
+
+\[
+\mathcal{C}(s,A)
+=
+\big(F_C^{\text{geom}}(s),\,F_C^{\text{gauge}}(s,A)\big).
+\]
+
+
+
+
+
+\[
+\Phi(s,A)
+=
+\Phi\big(F_I(s),F_E(s),\mathcal{C}(s,A)\big).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Yang--Mills coupling}
+
+
+
+\[
+\mathcal{S}[s,A]
+=
+\int dt\,
+\left(
+\tfrac12 g_{ij}\dot{s}^i\dot{s}^j
+-\Phi(s,A)
+-\tfrac14 h_{ab}F_{ij}^{\ a}F^{ij\,b}
+\right).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Curvature-induced potential and force}
+
+
+
+\[
+U_F(s)
+=
+\tfrac14 h_{ab}F_{ij}^{\ a}F^{ij\,b}.
+\]
+
+
+
+
+
+\[
+\operatorname{grad}_g U_F
+=
+g^{ij}\nabla_j U_F\,\partial_i.
+\]
+
+
+
+
+
+\[
+\nabla_{\dot{s}}\dot{s}
+=
+-\operatorname{grad}_g\Phi(s,A)
+-\operatorname{grad}_g U_F(s).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Gauge equation and matter current}
+
+
+
+\[
+D^iF_{ij}^{\ a}
+=
+J_j^{\ a},
+\]
+
+
+
+
+
+\[
+J_j^{\ a}(s)
+=
+-\frac{\delta}{\delta A^{j}_{\ a}(s)}
+\int dt\,
+\Phi\big(F_I,F_E,\mathcal{C}(s,A)\big).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Topological sectors}
+
+
+
+\[
+k
+=
+\frac{1}{8\pi^2}
+\int_{\mathcal{M}}
+\mathrm{tr}(F\wedge F).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Path integral}
+
+
+
+\[
+Z
+=
+\int
+\mathcal{D}s\,\mathcal{D}A\,
+\mathcal{D}c\,\mathcal{D}\bar{c}\,\mathcal{D}B\;
+\exp\!\left[
+-\frac{1}{\tau}
+\big(
+\mathcal{S}[s,A]
++S_{\text{gf}}
++S_{\text{ghost}}
+\big)
+\right].
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{BRST symmetry and anomaly condition}
+
+
+
+\[
+Q A_i^{\ a}=D_i c^a,\qquad
+Q c^a=-\tfrac12 f^{a}_{\ bc}c^b c^c,\qquad
+Q\bar{c}_a=B_a,\qquad
+Q B_a=0.
+\]
+
+
+
+
+
+\[
+Q^2=0
+\quad\Longleftrightarrow\quad
+d_{abc}
+=
+\mathrm{Tr}\big(T_a\{T_b,T_c\}\big)
+=0.
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Quantum regimes}
+
+
+
+\[
+[\hat{s}^i,\hat{p}_j]=i\tau\delta^i_j,
+\qquad
+i\tau\,\partial_t\psi=\hat{H}\psi.
+\]
+
+
+
+
+
+\[
+\hat{\mathcal{G}}_a\Psi=0,
+\qquad
+\hat{\mathcal{H}}\Psi=0.
+\]
+
+
+
+%============================================================
+\section{Anomaly Conditions and Operator Domains}
+
+\subsection{Hilbert space}
+
+
+
+\[
+\mathcal{H}
+=
+L^2\!\left(\mathcal{M},\,\sqrt{\det g}\,ds\right).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Momentum operator}
+
+
+
+\[
+\hat{p}_i
+=
+-i\tau\left(\nabla_i+\tfrac12\Gamma^k_{\ ik}\right),
+\qquad
+\mathcal{D}(\hat{p}_i)=C^\infty_0(\mathcal{M}).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Hamiltonian}
+
+
+
+\[
+\hat{H}
+=
+-\frac{\tau^2}{2}\nabla_i g^{ij}\nabla_j
++\Phi(s,A)
++U_F(s).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Constraint operators}
+
+
+
+\[
+\hat{\mathcal{G}}_a
+=
+-i\tau D_i\frac{\delta}{\delta A_i^{\ a}}
++(\text{ghost terms}),
+\]
+
+
+
+
+
+\[
+\mathcal{H}_{\text{phys}}
+=
+\{\Psi\mid
+\hat{\mathcal{G}}_a\Psi=0,\;
+\hat{\mathcal{H}}\Psi=0\}.
+\]
+
+
+
+%============================================================
+\section{Falsification Metrics}
+
+\subsection{Hessian resonance}
+
+
+
+\[
+H_{ij}=\nabla_i\nabla_j\Phi,
+\qquad
+\omega_k=\sqrt{\lambda_k/m_\Phi}.
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{CSNR}
+
+
+
+\[
+\mathrm{CSNR}(s)
+=
+\frac{\Phi(s,A)}{k_B T_{\mathrm{eff}}}.
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Kramers escape}
+
+
+
+\[
+\tau_{\mathrm{esc}}
+\approx
+\frac{2\pi}{\omega_{\mathrm{well}}}
+\exp\!\left(\frac{\Delta\Phi}{k_B T_{\mathrm{eff}}}\right).
+\]
+
+
+
+%------------------------------------------------------------
+\subsection{Correlation length}
+
+
+
+\[
+C(r)\sim e^{-r/\xi},
+\qquad
+\xi
+=
+\sqrt{\frac{k_B T_{\mathrm{eff}}}{\lambda_{\min}(H)}}.
+\]
+
+
+
+%============================================================
+\section{Numerical Appendix}
+
+\subsection{Toy potential}
+
+
+
+\[
+\Phi(s)
+=
+\sum_{i=1}^m
+\alpha_i
+e^{-\frac{\|s-\mu_i\|^2}{2\sigma_i^2}}
++
+\beta\,\|s\|^2.
+\]
+
+
+
+\subsection{Gradient}
+
+
+
+\[
+\partial_j\Phi
+=
+\sum_i
+\alpha_i e^{-\frac{\|s-\mu_i\|^2}{2\sigma_i^2}}
+\frac{(s-\mu_i)_j}{\sigma_i^2}
++
+2\beta s_j.
+\]
+
+
+
+\subsection{Hessian}
+
+
+
+\[
+H_{jk}
+=
+\sum_i
+\alpha_i e^{-\frac{\|s-\mu_i\|^2}{2\sigma_i^2}}
+\left(
+\frac{\delta_{jk}}{\sigma_i^2}
+-
+\frac{(s-\mu_i)_j(s-\mu_i)_k}{\sigma_i^4}
+\right)
++
+2\beta\delta_{jk}.
+\]
+
+
+
+\subsection{Euler--Maruyama pseudocode}
+
+\begin{verbatim}
+# Euler-Maruyama simulation for the toy model
+import numpy as np
+from numpy.random import normal
+
+def Phi(s):
+    val = 0.0
+    for i in range(m):
+        diff = s - mu[i]
+        val += alpha[i] * np.exp(-np.dot(diff, diff) /
+                                 (2 * sigma[i]**2))
+    return val + beta * np.dot(s, s)
+
+def grad_Phi(s):
+    g = np.zeros(n)
+    for i in range(m):
+        diff = s - mu[i]
+        e = np.exp(-np.dot(diff, diff) / (2 * sigma[i]**2))
+        g += alpha[i] * e * diff / sigma[i]**2
+    return g + 2 * beta * s
+
+def simulate_sde(s0, dt, steps, Sigma):
+    s = np.array(s0, dtype=float)
+    traj = [s.copy()]
+    for _ in range(steps):
+        drift = -grad_Phi(s)
+        noise = Sigma @ normal(size=Sigma.shape[1])
+        s = s + drift * dt + noise * np.sqrt(dt)
+        traj.append(s.copy())
+    return np.array(traj)
+\end{verbatim}
+
+%============================================================
+\section{Conclusion}
+
+We have constructed a universal field-theoretic framework for modeling
+consciousness as a dynamical process on a smooth configuration manifold.
+The theory is built in layers: a rigorous classical core, a stochastic
+extension, a gauge-theoretic causal augmentation, and a quantum/BRST
+regime. Each layer is mathematically consistent, reduces to the previous
+one when additional structure is removed, and supports empirical
+falsification.
+
+%============================================================
+\section{Outlook}
+
+Future work
