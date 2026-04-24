@@ -777,3 +777,9 @@ falsification.
 \section{Outlook}
 
 Future work
+| Test | Verdict | Failure Type | Fixable? |
+| --- | --- | --- | --- |
+| Hessian Resonance | FAIL | Structural — m_Φ undefined | Yes, with explicit scaling law |
+| CSNR Ordering | FAIL | Theory-level — Φ doesn't encode consciousness | Hard — needs independent IEC definitions |
+| Kramers Escape | FAIL | Partly methodological | Yes, with continuous trajectory data |
+| Correlation Length | FAIL (globally) | Methodological — mixed-phase analysis | Yes — per-state analysis passes |
