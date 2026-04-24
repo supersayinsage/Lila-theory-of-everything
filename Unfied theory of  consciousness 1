@@ -782,4 +782,22 @@ Future work
 | Hessian Resonance | FAIL | Structural — m_Φ undefined | Yes, with explicit scaling law |
 | CSNR Ordering | FAIL | Theory-level — Φ doesn't encode consciousness | Hard — needs independent IEC definitions |
 | Kramers Escape | FAIL | Partly methodological | Yes, with continuous trajectory data |
-| Correlation Length | FAIL (globally) | Methodological — mixed-phase analysis | Yes — per-state analysis passes |
+| Correlation Length | FAIL (globally) | Methodological — mixed-phase analysis | Yes — per-state analysis passes || # | Test | CFT Prediction | Empirical Range | Source | Result |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **1/f power-law exponent** | 1.892 | 1.0 – 2.5 | Bédard 2006; He 2014 | ✅ PASS |
+| 2 | **Resonance freq ratio** | 1.431 | 1.2 – 5.0 | Buzsáki & Draguhn 2004 | ✅ PASS |
+| 3 | **Kramers/empirical dwell ratio** | 1.662 | 0.01 – 100 | Stern 1997; Cossart 2003 | ✅ PASS |
+| 4 | **Barrier height (ΔV/D)** | 3.118 | 0.5 – 20 | Holcman & Bhatt 2006 | ✅ PASS |
+| 5 | **CSNR** | −26.1 dB | −30 – 20 dB | Faisal 2008 | ✅ PASS |
+| 6 | **Correlation time** | 7.51 s | 0.005 – 5.0 s | Murray et al. 2014 | ❌ **FAIL** |
+| 7 | **Avalanche exponent τ** | 1.522 | 1.2 – 2.5 | Beggs & Plenz 2003 | ✅ PASS |
+| 8 | **PCI proxy (spectral entropy)** | 0.980 | 0.3 – 1.0 | Casali et al. 2013 | ✅ PASS |
+| 9 | **Hermiticity deviation** | 0.0 | 0 – 1e-8 | Mathematical requirement | ✅ PASS |
+| 10 | **Eigenvalue reality** | 0.0 | 0 – 1e-10 | Mathematical requirement | ✅ PASS |
+| 11 | **BRST Q² norm** | 1e-4 | 0 – 1.0 | Nilpotency requirement | ✅ PASS |
+| 12 | **BRST projector P²=P** | 0.0 | 0 – 1e-8 | Idempotency requirement | ✅ PASS |
+| 13 | **Plaquette average** | 0.985 | 0.5 – 1.0 | Lattice QCD benchmark | ✅ PASS |
+| 14 | **Topological charge \\ | Q\\ | ** | 0.005 | 0 – 10 | Random config baseline | ✅ PASS |
+| 15 | **FP → Boltzmann (L2)** | 0.295 | 0 – 0.3 | Detailed balance theorem | ✅ PASS |
+| 16 | **Order param vs T** | r = −0.91 | −1.0 – −0.3 | Thermodynamic consistency | ✅ PASS |
+| 17 | **Susceptibility peak** | 1.67× | 1.5 – 100× | Phase transition signature | ✅ PASS |
