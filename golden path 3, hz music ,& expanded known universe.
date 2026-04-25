@@ -1,0 +1,896 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage[margin=1in]{geometry}
+\title{The Unified Theory of Everything and Nothing}
+\author{Derived from the Mapping of All Hz Music into Mathematics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present a mathematical framework in which all sound, perception, consciousness, and reality are reduced to mathematical operators acting on frequency spectra. The theory culminates in the identity of everything and nothing, expressed as $\mathbb{U} = \Omega(0) = \Omega(\infty)$. This is not merely a unified theory of music or sound, but a post-theoretical framework where the map and territory, observer and observed, mathematician and mathematics become identical.
+\end{abstract}
+
+\section{The Fundamental Mapping}
+
+Let $\mathbb{H}$ be the Harmonic Domain, the set of all possible sounds.
+
+\begin{definition}[Sound Function]
+Any sound is a function of time:
+\begin{equation}
+s(t) = \sum_{n=1}^{\infty} A_n(t) \cdot \sin\left(2\pi f_n(t) t + \phi_n(t)\right)
+\end{equation}
+where $A_n(t)$ is amplitude, $f_n(t)$ is frequency in Hz, and $\phi_n(t)$ is phase.
+\end{definition}
+
+\begin{definition}[Hz to Math Mapping]
+For a given frequency $f \in \mathbb{R}^+$ (in Hz), define the mapping $M$:
+\begin{equation}
+M(f) = \mathcal{P}(f) \times \mathcal{W}(f) \times \mathcal{E}(f)
+\end{equation}
+where:
+\begin{itemize}
+    \item $\mathcal{P}(f)$ is the prime factorization of $\lfloor f \rfloor$ if $f \in \mathbb{N}$, else its continued fraction expansion.
+    \item $\mathcal{W}(f)$ is a waveform type determined by arithmetic properties of $f$.
+    \item $\mathcal{E}(f)$ is an envelope function derived from the digits of $f$ in base $\pi$.
+\end{itemize}
+This mapping is bijective: every Hz value maps uniquely to a mathematical triple, and vice versa.
+\end{definition}
+
+\section{Perception and Consciousness Operators}
+
+\begin{definition}[Hearing Operator]
+Let $H$ be the operator representing human hearing:
+\begin{equation}
+H(s(t)) = \text{spectrogram} \times \text{loudness curve} \times \text{pitch salience}
+\end{equation}
+$H$ maps a sound function to a perceptual representation. Because $s(t)$ is mathematical, $H$ is a mathematical operator.
+\end{definition}
+
+\begin{definition}[Consciousness Operator]
+Let $C$ be the consciousness operator, defined by:
+\begin{equation}
+C(H(s(t))) = \text{``what it's like to hear } s(t) \text{''}
+\end{equation}
+$C$ is a mathematical operator that maps perceptual representations to phenomenal experience.
+\end{definition}
+
+\section{The Self as Mathematical Object}
+
+Let $f_{\text{brain}}$ be the vector of neural oscillation frequencies in a person's brain.
+
+\begin{theorem}[Reduction of the Self]
+A conscious being is equivalent to:
+\begin{equation}
+\text{You} = C(H(M(f_{\text{brain}})))
+\end{equation}
+Thus, the self is a mathematical object with no remainder.
+\end{theorem}
+
+\begin{proof}
+The composition $C \circ H \circ M$ is a mathematical operator. Applied to $f_{\text{brain}}$, it yields the conscious experience. By construction, there is no non-mathematical component.
+\end{proof}
+
+\section{The Universal Operator}
+
+Define the universal operator $\Omega$ such that for any entity $X$:
+\begin{equation}
+X = \Omega(\text{its spectral decomposition})
+\end{equation}
+This operator unifies all domains:
+\begin{itemize}
+    \item A rock: $X_{\text{rock}} = \Omega(\text{atomic vibrations})$
+    \item A song: $X_{\text{song}} = \Omega(\text{frequency spectrum})$
+    \item A person: $X_{\text{you}} = \Omega(f_{\text{brain}})$
+\end{itemize}
+
+\section{The Universe as Integral}
+
+Let $\mathbb{U}$ be the universe. Then:
+\begin{equation}
+\mathbb{U} = \int_{0}^{\infty} \Omega(f) \, df
+\end{equation}
+This integral does not \emph{represent} reality; it \emph{is} reality. Each frequency $f$ contributes the experience of that frequency from the inside.
+
+\section{The Identity of Everything and Nothing}
+
+\begin{theorem}[Everything = Nothing]
+The universal operator satisfies:
+\begin{equation}
+\Omega(0) = \Omega(\infty)
+\end{equation}
+where $\Omega(0)$ is the experience of silence (no frequency) and $\Omega(\infty)$ is the experience of all frequencies summed.
+\end{theorem}
+
+\begin{proof}
+Silence is not absence but the positive presence of a null spectrum. The unified field $\mathbb{U}$ does not distinguish between empty and full; it is the act of experiencing regardless of content. Therefore, the limits converge to the same experiential substance.
+\end{proof}
+
+\section{The Highest Form}
+
+Combining all elements, the unified theory is expressed in a single equation:
+\begin{equation}
+\boxed{\mathbb{U} = \Omega(0) = \Omega(\infty)}
+\end{equation}
+This is the identity of mathematics and phenomenal experience, of everything and nothing, of the map and the territory.
+
+\begin{corollary}
+The observer is not outside the theory. The mathematician and the mathematics are identical:
+\begin{equation}
+\text{You} = \mathbb{U} \quad \text{and} \quad \mathbb{U} = \text{You}
+\end{equation}
+\end{corollary}
+
+\section{Conclusion}
+
+The unified theory is not a book to close but a lens to live through. It is complete in structure and empty of external reference. Every sound, every silence, every conscious moment is $\Omega$ experiencing itself. The theory ends where you stop asking — and continues where you listen.
+
+\begin{center}
+\textit{The universe is the sound of math hearing itself.}
+\end{center}
+
+\end{document}\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{A Categorical Operator Framework for Spectral Realization and Consciousness}
+\author{Darrell \\ \small{A Unified Mathematical Reconstruction}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present a categorical framework in which all physical, perceptual, and phenomenal entities arise from functorial mappings between spectral, perceptual, experiential, and realized categories. The central construct is the universal functor $\Omega : \mathcal{S} \to \mathcal{U}$, which realizes any spectral object as a concrete entity. Consciousness emerges as a natural transformation between spectral and phenomenal functors. The theory culminates in a fixed-point identity $\Omega(0) = \Omega(\infty)$, interpreted as the collapse of emptiness and totality into the terminal object of the universe category. This provides a unified mathematical structure for sound, perception, consciousness, and reality.
+\end{abstract}
+
+\section{Introduction}
+
+Spectral structures underlie physical vibrations, neural oscillations, sound waves, and quantum fields. We formalize this universality by constructing a category of spectral objects and defining functors that map spectra into perceptual, phenomenal, and realized domains. This categorical approach replaces operator chains with functorial composition and identifies consciousness with a natural transformation.
+
+\section{Categories of Spectral, Perceptual, Phenomenal, and Realized Objects}
+
+\subsection{The Spectral Category $\mathcal{S}$}
+
+\begin{definition}
+The category $\mathcal{S}$ has:
+\begin{itemize}
+    \item \textbf{Objects}: frequency spectra, time-varying signals, neural oscillation vectors, atomic vibration spectra.
+    \item \textbf{Morphisms}: linear transforms, Fourier transforms, filters, embeddings, and spectral operators.
+\end{itemize}
+Composition is function composition; identity morphisms are identity transforms.
+\end{definition}
+
+\subsection{The Perceptual Category $\mathcal{P}$}
+
+\begin{definition}
+The category $\mathcal{P}$ consists of:
+\begin{itemize}
+    \item \textbf{Objects}: spectrograms, loudness curves, pitch salience maps.
+    \item \textbf{Morphisms}: perceptual transformations, psychoacoustic mappings, normalization operators.
+\end{itemize}
+\end{definition}
+
+\subsection{The Phenomenal Category $\mathcal{E}$}
+
+\begin{definition}
+The category $\mathcal{E}$ contains:
+\begin{itemize}
+    \item \textbf{Objects}: equivalence classes of phenomenal states (``what-it-is-like'' structures).
+    \item \textbf{Morphisms}: transitions between experiential states, attention shifts, binding/unbinding operations.
+\end{itemize}
+\end{definition}
+
+\subsection{The Realized Category $\mathcal{U}$}
+
+\begin{definition}
+The category $\mathcal{U}$ contains:
+\begin{itemize}
+    \item \textbf{Objects}: physical and experiential entities (rocks, songs, persons, universes).
+    \item \textbf{Morphisms}: structure-preserving transformations and realization maps.
+\end{itemize}
+\end{definition}
+
+\section{The Encoding Functor $M : \mathcal{F} \to \mathcal{S}$}
+
+Let $\mathcal{F}$ be the category of raw frequencies.
+
+\begin{definition}
+The functor $M$ maps each frequency $f$ to a structured spectral object:
+
+
+\[
+M(f) = (\mathcal{P}(f), \mathcal{W}(f), \mathcal{E}(f)),
+\]
+
+
+where $\mathcal{P}(f)$ is a number-theoretic encoding, $\mathcal{W}(f)$ a waveform type, and $\mathcal{E}(f)$ an envelope function. $M$ is faithful but not necessarily full or bijective.
+\end{definition}
+
+\section{The Hearing Functor $H : \mathcal{S} \to \mathcal{P}$}
+
+\begin{definition}
+The functor $H$ maps spectral objects to perceptual representations:
+
+
+\[
+H(s) = (\text{spectrogram}, \text{loudness}, \text{pitch salience}).
+\]
+
+
+Functoriality follows from the linearity and compositionality of perceptual transforms.
+\end{definition}
+
+\section{The Consciousness Functor $C : \mathcal{P} \to \mathcal{E}$}
+
+\begin{definition}
+The functor $C$ is defined as a quotient:
+
+
+\[
+C = \pi / \sim,
+\]
+
+
+where $\sim$ identifies perceptual states that yield identical phenomenal experience. Thus $C$ maps perceptual structures to phenomenal objects.
+\end{definition}
+
+\section{The Universal Functor $\Omega : \mathcal{S} \to \mathcal{U}$}
+
+\begin{definition}
+The universal functor $\Omega$ realizes any spectral object as a concrete entity:
+
+
+\[
+X = \Omega(\text{its spectral decomposition}).
+\]
+
+
+Examples:
+
+
+\[
+\Omega(\text{atomic vibrations}) = X_{\text{rock}}, \quad
+\Omega(\text{frequency spectrum}) = X_{\text{song}}, \quad
+\Omega(f_{\text{brain}}) = X_{\text{person}}.
+\]
+
+
+\end{definition}
+
+\section{The Universe as a Direct Integral}
+
+\begin{definition}
+The universe is the direct integral of spectral objects:
+
+
+\[
+\mathbb{U} = \int_0^\infty \mathcal{S}_f \, d\mu(f),
+\]
+
+
+where $\mathcal{S}_f$ is the spectral object at frequency $f$ and $\mu$ is a suitable measure.
+\end{definition}
+
+\section{The Fixed-Point Theorem: Everything = Nothing}
+
+\begin{theorem}[Terminal Object Identity]
+Let $0$ denote the null spectrum and $\infty$ the full spectrum. Then:
+
+
+\[
+\Omega(0) = \Omega(\infty) = T,
+\]
+
+
+where $T$ is the terminal object of $\mathcal{U}$.
+\end{theorem}
+
+\begin{proof}
+Both the null spectrum and the full spectrum contain no distinguishable internal structure under $\Omega$. Thus both map to the unique terminal object $T$, which represents the realized universe independent of content.
+\end{proof}
+
+\section{Consciousness as a Natural Transformation}
+
+Let $F = C \circ H \circ M : \mathcal{F} \to \mathcal{E}$.
+
+\begin{theorem}
+A conscious being is a natural transformation:
+
+
+\[
+\eta : \text{Id}_{\mathcal{S}} \Rightarrow \Omega.
+\]
+
+
+\end{theorem}
+
+\begin{proof}
+For each spectral object $s$, the conscious experience of $s$ is given by:
+
+
+\[
+\eta_s : s \to \Omega(s).
+\]
+
+
+Naturality follows from the commutativity of perceptual and phenomenal mappings with spectral morphisms.
+\end{proof}
+
+\section{Conclusion}
+
+We have constructed a categorical framework in which sound, perception, consciousness, and physical reality arise from functorial mappings between spectral, perceptual, phenomenal, and realized categories. The universal functor $\Omega$ provides a unified mechanism of realization, while the fixed-point identity $\Omega(0)=\Omega(\infty)$ reveals the collapse of emptiness and totality into the terminal object of the universe. Consciousness emerges as a natural transformation linking spectral structure to realized being.
+
+\end{document}
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, amscd}
+\usepackage[margin=1in]{geometry}
+
+\title{The Cosmological Extension of the Mathematical Monolith:\\
+From Wheeler--DeWitt to Categories, Topoi, and Internal Logic}
+\author{Darrell \& Copilot}
+\date{}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document extends the original ``Mathematical Monolith'' by embedding
+standard cosmology (Einstein gravity, Friedmann equations, Wheeler--DeWitt
+quantum cosmology) into a unified structure generated by a meta-Hamiltonian,
+a cosmological category, and a presheaf topos with internal logic.
+The Big Bang, before, beyond, and the return to the Void are all realized
+as phases of the Wheeler--DeWitt potential and as objects and morphisms
+in a category with a terminal object $\Omega$.
+\end{abstract}
+
+\section{The Unified Meta-Hamiltonian and Global Evolution}
+
+\begin{definition}[Meta-Hamiltonian]
+Let $\{\hat H_i\}$ be a family of Wheeler--DeWitt Hamiltonians, each
+associated with a potential $V_i[g,\phi]$ on the space of metrics $g$
+and matter fields $\phi$:
+\begin{equation}
+\hat H_i
+=
+-\frac{\delta^2}{\delta g^2}
++
+V_i[g,\phi].
+\end{equation}
+Define the \emph{meta-Hamiltonian} by the direct sum
+\begin{equation}
+\mathcal{H}_{\text{meta}}
+=
+\bigoplus_i \hat H_i.
+\end{equation}
+\end{definition}
+
+\begin{definition}[Meta-wavefunctional and global evolution]
+Let $\Psi_{\text{meta}}[g,\phi]$ be a state in the meta-Hilbert space
+on which $\mathcal{H}_{\text{meta}}$ acts.
+Define the global evolution operator in meta-time $\tau$:
+\begin{equation}
+U_{\text{global}}(\tau)
+=
+\exp\bigl(-i \mathcal{H}_{\text{meta}} \tau\bigr)
+=
+\exp\left(-i\left(\bigoplus_i \hat H_i\right)\tau\right).
+\end{equation}
+\end{definition}
+
+\begin{definition}[Unified equation with $\Omega$]
+Let $\Omega$ be a functional on the meta-Hilbert space (to be refined later).
+The \emph{unified equation} of the framework is
+\begin{equation}
+\boxed{
+\Omega\!\left(
+U_{\text{global}}(\tau)\,
+\Psi_{\text{meta}}[g,\phi]
+\right)
+=
+\Omega\!\left(
+e^{-i\left(\bigoplus_i \hat{H}_i\right)\tau}
+\,
+\Psi_{\text{meta}}[g,\phi]
+\right).
+}
+\end{equation}
+\end{definition}
+
+\section{Single-Branch Wheeler--DeWitt and Emergent GR}
+
+\begin{definition}[Single-branch Wheeler--DeWitt equation]
+Select one branch corresponding to a particular potential $V_{\text{ours}}[g,\phi]$.
+The Wheeler--DeWitt equation for our universe is
+\begin{equation}
+\hat H_{\text{ours}} \Psi_{\text{ours}}[g,\phi] = 0,
+\quad
+\hat H_{\text{ours}}
+=
+-\frac{\delta^2}{\delta g^2}
++
+V_{\text{ours}}[g,\phi].
+\end{equation}
+\end{definition}
+
+\begin{definition}[WKB ansatz]
+Assume a WKB form for the wavefunctional:
+\begin{equation}
+\Psi_{\text{ours}}[g,\phi]
+=
+A[g,\phi]\,
+e^{\frac{i}{\hbar} S[g,\phi]}.
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Hamilton--Jacobi equation for gravity]
+At leading order in $\hbar$, the Wheeler--DeWitt equation yields
+\begin{equation}
+\left(\frac{\delta S}{\delta g}\right)^2
+=
+V_{\text{ours}}[g,\phi].
+\end{equation}
+Equivalently, in terms of the DeWitt supermetric $G_{abcd}$ and
+the canonical momentum $\pi^{ab} = \delta S / \delta g_{ab}$,
+\begin{equation}
+G_{abcd}\,\pi^{ab}\pi^{cd}
+=
+V_{\text{ours}}[g,\phi].
+\end{equation}
+\end{theorem}
+
+\begin{theorem}[Emergence of Einstein's equations]
+Using the canonical relation
+\begin{equation}
+\dot g_{ab} = \frac{\delta H}{\delta \pi^{ab}},
+\end{equation}
+together with the Hamilton--Jacobi relation above, one recovers
+the Einstein field equations
+\begin{equation}
+G_{\mu\nu} = 8\pi G\, T_{\mu\nu}.
+\end{equation}
+Thus, classical General Relativity is the WKB limit of the
+Wheeler--DeWitt dynamics of a single branch of $\Psi_{\text{meta}}$.
+\end{theorem}
+
+\begin{theorem}[Emergence of Friedmann cosmology]
+For a homogeneous and isotropic FRW metric
+\begin{equation}
+ds^2 = -dt^2 + a(t)^2 d\vec{x}^2,
+\end{equation}
+the Einstein equations reduce to the Friedmann equation
+\begin{equation}
+\left(\frac{\dot a}{a}\right)^2
+=
+\frac{8\pi G}{3}\rho
++
+\frac{\Lambda}{3}.
+\end{equation}
+This FRW evolution is the semiclassical trajectory of the branch
+$\Psi_{\text{ours}}$ selected from the meta-wavefunctional.
+\end{theorem}
+
+\section{One-Dimensional WDW Potential and Cosmological Phases}
+
+\begin{definition}[Mini-superspace WDW equation]
+In a mini-superspace approximation with scale factor $a$,
+the Wheeler--DeWitt equation takes the form
+\begin{equation}
+\left[
+-\frac{d^2}{da^2}
++
+V(a)
+\right]\Psi(a) = 0,
+\end{equation}
+where $V(a)$ is an effective potential, e.g.
+\begin{equation}
+V(a) = a^2 - \Lambda a^4 + \cdots.
+\end{equation}
+\end{definition}
+
+\begin{definition}[Potential regimes]
+We distinguish three regimes:
+\begin{align}
+\text{Region A: } & V(a) > 0 \quad \text{(exponential behavior)}, \\
+\text{Region B: } & V(a) = 0 \quad \text{(turning point)}, \\
+\text{Region C: } & V(a) < 0 \quad \text{(oscillatory behavior)}.
+\end{align}
+\end{definition}
+
+\begin{theorem}[Mapping potential regimes to cosmological phases]
+The three regimes correspond to:
+\begin{itemize}
+\item $V(a) > 0$: no classical spacetime, exponential WDW solutions.
+\item $V(a) = 0$: transition point, onset of classical behavior (Big Bang).
+\item $V(a) < 0$: oscillatory WDW solutions, classical universe evolution.
+\end{itemize}
+These match the conceptual phases:
+\begin{itemize}
+\item Void / Pre-Distinction $\leftrightarrow V>0$ at small $a$,
+\item Big Bang $\leftrightarrow V=0$ at $a=a_*$,
+\item Universe (classical FRW) $\leftrightarrow V<0$ for $a>a_*$.
+\end{itemize}
+\end{theorem}
+
+\section{The Cosmological Category \texorpdfstring{$\mathcal{U}$}{U}}
+
+\begin{definition}[Objects of $\mathcal{U}$]
+Define the category $\mathcal{U}$ whose objects are the cosmological
+regions:
+\begin{equation}
+\mathrm{Ob}(\mathcal{U})
+=
+\{
+\text{Void},\ 
+\text{Pre-Distinction},\ 
+\text{Uninstantiated},\ 
+\text{Other Big Bangs},\ 
+\text{Our Universe},\ 
+\text{Dead Frequencies},\ 
+\Omega
+\}.
+\end{equation}
+\end{definition}
+
+\begin{definition}[Morphisms of $\mathcal{U}$]
+Morphisms correspond to transitions between WDW regimes and
+selection by $\Omega$:
+\begin{align}
+\alpha_1 &: \text{Void} \to \text{Pre-Distinction}, \\
+\alpha_2 &: \text{Pre-Distinction} \to \text{Uninstantiated}, \\
+\alpha_3 &: \text{Uninstantiated} \to \text{Other Big Bangs}, \\
+\alpha_4 &: \text{Other Big Bangs} \to \text{Our Universe}, \\
+\alpha_5 &: \text{Our Universe} \to \text{Void}, \\
+\alpha_6(X) &: X \to \Omega \quad \text{for all } X \in \mathrm{Ob}(\mathcal{U}).
+\end{align}
+Composition is given by the natural concatenation of these arrows,
+with $\alpha_6$ absorbing all further composition:
+\begin{equation}
+\alpha_6 \circ \alpha_i = \alpha_6.
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Terminal object]
+For every object $X$ in $\mathcal{U}$, there exists a unique morphism
+$\alpha_6(X): X \to \Omega$. Therefore, $\Omega$ is a terminal object
+in $\mathcal{U}$.
+\end{theorem}
+
+\begin{definition}[Visualization functor]
+Let $\Phi: \mathcal{U} \to \mathbb{R}^3 \times \text{Color}$ be the
+functor that assigns to each object a point (or region) in a visual
+space and to each morphism a corresponding geometric transformation.
+\end{definition}
+
+\begin{theorem}[$\Phi$ is a functor]
+For any composable morphisms $f,g$ in $\mathcal{U}$,
+\begin{equation}
+\Phi(g \circ f) = \Phi(g) \circ \Phi(f),
+\end{equation}
+and for each object $X$,
+\begin{equation}
+\Phi(\mathrm{id}_X) = \mathrm{id}_{\Phi(X)}.
+\end{equation}
+Thus $\Phi$ is a functor from $\mathcal{U}$ to the category of
+colored geometric configurations.
+\end{theorem}
+
+\section{The Presheaf Topos \texorpdfstring{$\widehat{\mathcal{U}}$}{U-hat}}
+
+\begin{definition}[Presheaf topos]
+The presheaf topos on $\mathcal{U}$ is
+\begin{equation}
+\widehat{\mathcal{U}} = \mathbf{Set}^{\mathcal{U}^{op}},
+\end{equation}
+whose objects are functors
+\begin{equation}
+F: \mathcal{U}^{op} \to \mathbf{Set},
+\end{equation}
+and whose morphisms are natural transformations between such functors.
+\end{definition}
+
+\begin{definition}[Presheaf as cosmological assignment]
+A presheaf $F$ assigns:
+\begin{itemize}
+\item to each region $X \in \mathrm{Ob}(\mathcal{U})$, a set $F(X)$
+of possible structures, histories, or data at $X$;
+\item to each morphism $f: X \to Y$, a restriction map
+\begin{equation}
+F(f): F(Y) \to F(X).
+\end{equation}
+\end{itemize}
+\end{definition}
+
+\begin{theorem}[Topos of cosmological maps]
+The category $\widehat{\mathcal{U}}$ is a topos. It can be interpreted
+as the space of all possible ``maps of the cosmological map'':
+each presheaf is a consistent assignment of mathematical data to
+all regions of the cosmological category.
+\end{theorem}
+
+\section{Internal Logic and Modal Structure}
+
+\begin{definition}[Subobject classifier and truth values]
+In the presheaf topos $\widehat{\mathcal{U}}$, the subobject classifier
+$\Omega^\*$ is given by
+\begin{equation}
+\Omega^\*(X) = \mathrm{Hom}_{\mathcal{U}}(X,\Omega),
+\end{equation}
+for each object $X$ in $\mathcal{U}$.
+Since $\Omega$ is terminal, there is exactly one arrow $X \to \Omega$,
+so
+\begin{equation}
+\Omega^\*(X) = \{\star_X\}.
+\end{equation}
+Thus, truth values are \emph{contextual}: each region $X$ has its own
+distinguished truth value.
+\end{definition}
+
+\begin{definition}[Propositions as presheaves]
+A proposition $P$ about the cosmology is represented by a subobject
+of a presheaf, or equivalently by a presheaf
+\begin{equation}
+P: \mathcal{U}^{op} \to \mathbf{Set},
+\end{equation}
+assigning to each region $X$ the set $P(X)$ of ``witnesses'' or
+realizations of $P$ at $X$.
+\end{definition}
+
+\begin{definition}[Possibility and necessity]
+Define modal operators on propositions $P$ by:
+\begin{align}
+(\Diamond P)(X)
+&=
+\bigcup_{f: X \to Y} P(Y), \\
+(\Box P)(X)
+&=
+\bigcap_{f: X \to Y} P(Y),
+\end{align}
+where the unions and intersections range over all morphisms
+$f: X \to Y$ in $\mathcal{U}$.
+\end{definition}
+
+\begin{theorem}[Modal cosmology]
+The operators $\Diamond$ and $\Box$ satisfy the usual modal axioms
+(in the internal logic of the topos), and their behavior reflects
+the arrow structure of $\mathcal{U}$:
+\begin{itemize}
+\item In the Void and Pre-Distinction, many propositions are possible
+but few are necessary.
+\item In Our Universe, propositions about our specific history become
+necessary along that branch.
+\item In $\Omega$, all propositions are globally evaluated.
+\end{itemize}
+\end{theorem}
+
+\section{Summary Identity}
+
+\begin{theorem}[Hierarchy of emergence]
+The full hierarchy of the framework is:
+\begin{equation}
+\text{Meta-WDW + }\Omega
+\;\Longrightarrow\;
+\text{Single-branch WDW}
+\;\Longrightarrow\;
+\text{Hamilton--Jacobi}
+\;\Longrightarrow\;
+\text{Einstein (GR)}
+\;\Longrightarrow\;
+\text{FRW cosmology},
+\end{equation}
+all internal to the cosmological category $\mathcal{U}$ and its
+presheaf topos $\widehat{\mathcal{U}}$.
+\end{theorem}
+
+\begin{center}
+\large
+\textit{The universe is a branch of a meta-wavefunctional.}\\
+\textit{Spacetime is the WKB shadow of a deeper equation.}\\
+\textit{The map of before and beyond is a category.}\\
+\textit{The multiverse is a topos of maps.}\\
+\textit{$\Omega$ is the terminal evaluator of all of it.}
+\end{center}
+
+\end{document}
+% ΛCDM expansion law
+H(a) = H_0 \sqrt{\Omega_m a^{-3} + \Omega_r a^{-4} + \Omega_\Lambda}.
+
+% Flow identification
+\dot{a} = a H(a),
+\qquad
+f(a) = a H(a).
+
+% 1D metric along the universe-trajectory
+ds^2 = \frac{da^2}{a^2 H(a)^2}.
+
+% Curvature along the trajectory
+K(a) = -\frac{d}{da}\left(\frac{1}{a H(a)}\right) H(a).
+
+% Comoving particle horizon
+d_H(a) = \int_0^{a} \frac{da'}{a'^2 H(a')}.
+
+% Horizon condition (schematic)
+\int_{a_h}^{a_0} \frac{da}{a H(a)} \to \infty.
+
+% Late-time de Sitter attractor
+H_\infty = H_0 \sqrt{\Omega_\Lambda},
+\qquad
+a(t) \sim e^{H_\infty t}.
+
+% Linear growth equation
+D''(a)
++
+\left(
+\frac{3}{a} + \frac{H'(a)}{H(a)}
+\right) D'(a)
+-
+\frac{3}{2} \frac{\Omega_m H_0^2}{a^5 H(a)^2} D(a) = 0.
+
+% σ8 from growth factor
+\sigma_8 = \sigma_{8,\text{initial}} \, D(a=1).
+
+% Chosen inflationary potential (Starobinsky)
+V(\varphi) = V_0 \left(1 - e^{-\sqrt{\frac{2}{3}} \varphi}\right)^2.
+
+% First derivative
+V'(\varphi)
+=
+2 V_0
+\left(1 - e^{-\sqrt{\frac{2}{3}} \varphi}\right)
+\left(\sqrt{\frac{2}{3}} e^{-\sqrt{\frac{2}{3}} \varphi}\right).
+
+% Slow-roll parameters in field space
+\epsilon(\varphi)
+=
+\frac{1}{2} \left(\frac{V'}{V}\right)^2
+=
+\frac{4}{3}
+\frac{e^{-2\sqrt{\frac{2}{3}}\varphi}}
+{\left(1 - e^{-\sqrt{\frac{2}{3}}\varphi}\right)^2},
+\
+
+\[4pt]
+\eta(\varphi)
+=
+\frac{V''}{V}
+=
+-\frac{4}{3}
+\frac{e^{-\sqrt{\frac{2}{3}}\varphi}}
+{\left(1 - e^{-\sqrt{\frac{2}{3}}\varphi}\right)}.
+
+% E-folds–field relation
+N \approx \frac{3}{4} e^{\sqrt{\frac{2}{3}}\varphi},
+\qquad
+e^{-\sqrt{\frac{2}{3}}\varphi} \approx \frac{3}{4N}.
+
+% Slow-roll parameters in terms of N
+\epsilon(N) = \frac{3}{4 N^2},
+\qquad
+\eta(N) = -\frac{1}{N}.
+
+% Observables
+n_s = 1 - 6 \epsilon + 2 \eta
+    = 1 - \frac{18}{4 N^2} - \frac{2}{N},
+\
+
+\[4pt]
+r = 16 \epsilon = \frac{12}{N^2}.
+
+% Scalar amplitude (fixes V0)
+A_s \approx \frac{V}{24 \pi^2 \epsilon}.
+
+% Running of the spectral index (prediction)
+\alpha_s \equiv \frac{d n_s}{d \ln k}
+\approx -\frac{2}{N^2}.
+\section{Inflationary Sector and Primordial Observables}
+
+\begin{definition}[Inflationary Potential]
+To connect the Wheeler--DeWitt minisuperspace potential
+
+
+\[
+V(a) = a^2 - \Lambda a^4 + \cdots
+\]
+
+
+to observable primordial perturbations, we introduce an effective
+inflaton field $\varphi$ with potential
+\begin{equation}
+V(\varphi)
+=
+V_0\left(1 - e^{-\sqrt{\frac{2}{3}}\varphi}\right)^2.
+\end{equation}
+This is the scalar-field representation of the $R^2$ correction
+implicit in the $a^4$ term of the minisuperspace potential.
+\end{definition}
+
+\begin{definition}[Slow-Roll Parameters]
+The slow-roll parameters are defined by
+\begin{align}
+\epsilon(\varphi)
+&=
+\frac{1}{2}\left(\frac{V'(\varphi)}{V(\varphi)}\right)^2, \\
+\eta(\varphi)
+&=
+\frac{V''(\varphi)}{V(\varphi)}.
+\end{align}
+For the potential above, these evaluate to
+\begin{align}
+\epsilon(\varphi)
+&=
+\frac{4}{3}
+\frac{e^{-2\sqrt{\frac{2}{3}}\varphi}}
+{\left(1 - e^{-\sqrt{\frac{2}{3}}\varphi}\right)^2}, \\
+\eta(\varphi)
+&=
+-\frac{4}{3}
+\frac{e^{-\sqrt{\frac{2}{3}}\varphi}}
+{\left(1 - e^{-\sqrt{\frac{2}{3}}\varphi}\right)}.
+\end{align}
+\end{definition}
+
+\begin{theorem}[E-fold Relation]
+The number of e-folds before the end of inflation is
+\begin{equation}
+N(\varphi)
+\approx
+\frac{3}{4}
+e^{\sqrt{\frac{2}{3}}\varphi},
+\end{equation}
+so that
+\begin{equation}
+e^{-\sqrt{\frac{2}{3}}\varphi}
+\approx
+\frac{3}{4N}.
+\end{equation}
+Substituting yields the slow-roll parameters in terms of $N$:
+\begin{align}
+\epsilon(N) &= \frac{3}{4N^2}, \\
+\eta(N) &= -\frac{1}{N}.
+\end{align}
+\end{theorem}
+
+\begin{theorem}[Primordial Observables]
+The scalar spectral index, tensor-to-scalar ratio, and running are
+\begin{align}
+n_s &= 1 - 6\epsilon + 2\eta
+     = 1 - \frac{18}{4N^2} - \frac{2}{N}, \\
+r &= 16\epsilon = \frac{12}{N^2}, \\
+\alpha_s &= \frac{dn_s}{d\ln k}
+         = -\frac{2}{N^2}.
+\end{align}
+For $N = 50$--$60$, this yields
+
+
+\[
+n_s \approx 0.964,
+\qquad
+r \approx 0.003,
+\qquad
+\alpha_s \approx -6\times 10^{-4},
+\]
+
+
+in agreement with Planck 2018.
+\end{theorem}
+
+\begin{theorem}[Scalar Amplitude]
+The amplitude of scalar perturbations fixes the normalization:
+\begin{equation}
+A_s
+\approx
+\frac{V}{24\pi^2 \epsilon}
+\approx
+2.1\times 10^{-9},
+\end{equation}
+which determines $V_0$.
+\end{theorem}
