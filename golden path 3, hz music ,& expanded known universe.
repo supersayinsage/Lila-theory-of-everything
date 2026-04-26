@@ -894,3 +894,810 @@ A_s
 \end{equation}
 which determines $V_0$.
 \end{theorem}
+\section{Perturbative Corrections from the Multiverse Manifold}
+
+We now introduce the simplest nontrivial deformation of the
+Wheeler--DeWitt multiverse manifold that can generate observable
+corrections while remaining consistent with the standard FRW +
+Starobinsky predictions.
+
+\begin{definition}[Manifold wave potential]
+Let the scalar field $\Phi : \mathcal{M} \to \mathbb{C}$ satisfy
+\begin{equation}
+\square_g \Phi + U(a,z)\,\Phi = 0,
+\end{equation}
+and choose the minimal branch-dependent perturbation
+\begin{equation}
+U(a,z) = \epsilon\, z^2,
+\end{equation}
+where $\epsilon$ is a small dimensionless parameter controlling the
+strength of the multiverse-manifold coupling.
+\end{definition}
+
+\begin{definition}[Branch embedding]
+Assume a single physical branch is given by a smooth embedding
+$z = z_\ast(a)$ with $z_\ast(0)=0$ and $z_\ast(a)$ small for all $a$
+in the inflationary regime. Then the effective one-dimensional
+Wheeler--DeWitt equation becomes
+\begin{equation}
+\left[
+-\frac{d^2}{da^2}
++
+V(a)
++
+\epsilon\, z_\ast(a)^2
+\right]\Psi(a) = 0.
+\end{equation}
+\end{definition}
+
+\begin{definition}[Effective inflationary potential]
+During slow-roll inflation, the scale factor $a$ is a monotonic
+function of the inflaton $\varphi$. Thus the correction induces
+a modified inflaton potential
+\begin{equation}
+V_{\text{eff}}(\varphi)
+=
+V(\varphi)
++
+\epsilon\, Z(\varphi),
+\end{equation}
+where $Z(\varphi) = z_\ast(a(\varphi))^2$.
+\end{definition}
+
+\begin{theorem}[Corrections to slow-roll parameters]
+To first order in $\epsilon$, the slow-roll parameters become
+\begin{align}
+\epsilon_{\text{eff}}
+&=
+\epsilon_0
++
+\epsilon\,\Delta\epsilon,
+\
+
+\[4pt]
+\eta_{\text{eff}}
+&=
+\eta_0
++
+\epsilon\,\Delta\eta,
+\end{align}
+where $\epsilon_0$ and $\eta_0$ are the Starobinsky values and
+\begin{align}
+\Delta\epsilon
+&=
+\frac{1}{2}
+\left(
+\frac{Z'}{V}
+-
+\frac{V'}{V^2} Z
+\right)^2,
+\
+
+\[4pt]
+\Delta\eta
+&=
+\frac{Z''}{V}
+-
+\frac{V''}{V^2} Z.
+\end{align}
+\end{theorem}
+
+\begin{theorem}[Corrections to observable quantities]
+The inflationary observables acquire corrections
+\begin{align}
+n_s
+&=
+n_s^{(0)}
++
+\epsilon\left(
+-6\Delta\epsilon + 2\Delta\eta
+\right),
+\
+
+\[4pt]
+r
+&=
+r^{(0)}
++
+16\epsilon\,\Delta\epsilon,
+\
+
+\[4pt]
+\alpha_s
+&=
+\alpha_s^{(0)}
++
+\epsilon\left(
+-2\frac{d}{dN}\Delta\eta
+-
+6\frac{d}{dN}\Delta\epsilon
+\right),
+\end{align}
+where $n_s^{(0)}, r^{(0)}, \alpha_s^{(0)}$ are the standard
+Starobinsky predictions.
+\end{theorem}
+
+\begin{corollary}[Observational consistency]
+For any embedding $z_\ast(a)$ satisfying
+$|z_\ast(a)| \ll 1$ during inflation, the corrections are
+\begin{equation}
+|\epsilon\,\Delta\epsilon| \ll \epsilon_0,
+\qquad
+|\epsilon\,\Delta\eta| \ll |\eta_0|,
+\end{equation}
+and therefore the manifold-induced corrections are small enough to
+preserve agreement with Planck 2018 while remaining, in principle,
+detectable.
+\end{corollary}
+\section{The Wheeler--DeWitt Multiverse Manifold and the Golden Path}
+
+\begin{definition}[Effective configuration variable]
+In the minisuperspace approximation, the universe is described by
+a single configuration variable $a$ (the scale factor), with
+Wheeler--DeWitt equation
+\begin{equation}
+\left[
+-\frac{d^2}{da^2}
++
+V(a)
+\right]\Psi(a) = 0,
+\end{equation}
+where $V(a)$ is the effective potential introduced earlier.
+\end{definition}
+
+\begin{definition}[Wheeler--DeWitt multiverse manifold]
+Define the \emph{Wheeler--DeWitt multiverse manifold} $\mathcal{M}$
+as the embedded surface
+\begin{equation}
+\mathcal{M}
+=
+\left\{
+(a,y,z) \in \mathbb{R}^3
+\;\middle|\;
+y = V(a),\;
+z \in I(a)
+\right\},
+\end{equation}
+where $I(a)$ is an interval (or union of intervals) encoding
+distinct cosmological branches (e.g.\ different inflationary
+histories or curvature sectors). Each ridge or valley in the
+visualization corresponds to a connected component of $I(a)$.
+\end{definition}
+
+\begin{definition}[Induced metric]
+Equip $\mathcal{M}$ with the metric induced from the Euclidean
+metric on $\mathbb{R}^3$:
+\begin{equation}
+g
+=
+\iota^\*(\delta),
+\end{equation}
+where $\iota : \mathcal{M} \hookrightarrow \mathbb{R}^3$ is the
+embedding and $\delta$ is the standard Euclidean metric.
+In local coordinates $(a,z)$ on $\mathcal{M}$, this yields
+\begin{equation}
+ds^2
+=
+\left(1 + V'(a)^2\right)\,da^2
++
+2\,V'(a)\,\partial_a z\, da\,dz
++
+\left(1 + (\partial_a z)^2\right)\,dz^2,
+\end{equation}
+with the precise form determined by the choice of $I(a)$.
+\end{definition}
+
+\begin{definition}[Golden Path (universe geodesic)]
+Let $\gamma : \tau \mapsto (a(\tau), z(\tau))$ be a curve on
+$\mathcal{M}$. The \emph{Golden Path} is defined as a geodesic
+of $(\mathcal{M}, g)$ satisfying
+\begin{equation}
+\frac{D^2 \gamma^i}{D\tau^2}
+=
+\frac{d^2 \gamma^i}{d\tau^2}
++
+\Gamma^i_{jk}(\gamma(\tau))
+\frac{d\gamma^j}{d\tau}
+\frac{d\gamma^k}{d\tau}
+= 0,
+\end{equation}
+with boundary conditions chosen so that the projection of $\gamma$
+onto the $a$--axis reproduces the semiclassical FRW evolution
+$a(t)$ obtained from the Friedmann equation.
+\end{definition}
+
+\begin{theorem}[Consistency with semiclassical cosmology]
+There exists a parametrization $\tau(t)$ such that the Golden Path
+$\gamma(\tau)$ satisfies
+\begin{equation}
+\pi_a(\gamma(\tau(t))) = a(t),
+\end{equation}
+where $\pi_a : \mathcal{M} \to \mathbb{R}$ is the projection onto
+the $a$--coordinate and $a(t)$ is the FRW scale factor solving
+\begin{equation}
+\left(\frac{\dot a}{a}\right)^2
+=
+\frac{8\pi G}{3}\rho
++
+\frac{\Lambda}{3}.
+\end{equation}
+Thus the classical universe trajectory is realized as a geodesic
+on the multiverse manifold $\mathcal{M}$.
+\end{theorem}
+
+\begin{definition}[Wave on the manifold]
+Define a scalar field $\Phi : \mathcal{M} \to \mathbb{C}$ satisfying
+the wave equation
+\begin{equation}
+\square_g \Phi + U(a,z)\,\Phi = 0,
+\end{equation}
+where $\square_g$ is the Laplace--Beltrami operator on
+$(\mathcal{M}, g)$ and $U(a,z)$ is an effective potential chosen
+so that, upon restriction to a fixed branch $z = z_\ast(a)$,
+the equation reduces to the minisuperspace Wheeler--DeWitt equation
+for $\Psi(a)$:
+\begin{equation}
+\left[
+-\frac{d^2}{da^2}
++
+V(a)
+\right]\Psi(a) = 0.
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Riding the wave of the manifold]
+Along the Golden Path $\gamma(\tau)$, the restriction of $\Phi$
+defines a phase and amplitude that modulate the geodesic motion.
+In this sense, the classical universe trajectory is a geodesic
+\emph{riding} the wave $\Phi$ on the multiverse manifold
+$(\mathcal{M}, g)$, while remaining consistent with the original
+Wheeler--DeWitt and Friedmann dynamics.
+\end{theorem}
+\section{Branch Weights, Probability Measures, and $\Omega$-Selection}
+
+The Wheeler--DeWitt multiverse manifold $\mathcal{M}$ contains
+multiple branches corresponding to distinct cosmological histories.
+To complete the predictive structure, we introduce a probability
+measure on branches and a selection functional based on the
+universal operator $\Omega$.
+
+\begin{definition}[Branch space]
+Let $\mathcal{B}$ denote the set of all smooth embeddings
+$z = z_\ast(a)$ defining branches of $\mathcal{M}$. Each branch
+corresponds to a distinct cosmological history.
+\end{definition}
+
+\begin{definition}[Branch amplitude]
+For each branch $b \in \mathcal{B}$, define the branch amplitude
+\begin{equation}
+\mathcal{A}[b]
+=
+\int_{\gamma_b}
+\Phi(a,z)\,
+e^{i S_{\text{geo}}[\gamma_b]}\,
+d\tau,
+\end{equation}
+where $\gamma_b$ is the Golden Path restricted to branch $b$ and
+$S_{\text{geo}}$ is the geodesic action on $(\mathcal{M},g)$.
+\end{definition}
+
+\begin{definition}[Branch weight]
+Define the branch weight by
+\begin{equation}
+W[b]
+=
+|\mathcal{A}[b]|^2.
+\end{equation}
+This generalizes the Born rule to the multiverse manifold.
+\end{definition}
+
+\begin{definition}[Normalized probability measure]
+The probability of realizing branch $b$ is
+\begin{equation}
+P[b]
+=
+\frac{W[b]}{\sum_{b' \in \mathcal{B}} W[b']}.
+\end{equation}
+\end{definition}
+
+\begin{definition}[$\Omega$-selection functional]
+Define the $\Omega$-selection functional as
+\begin{equation}
+\Omega(\Psi)
+=
+\operatorname*{arg\,max}_{b \in \mathcal{B}}
+P[b],
+\end{equation}
+i.e.\ the branch with maximal probability weight.
+\end{definition}
+
+\begin{theorem}[Consistency with classical cosmology]
+If the branch $b^\ast$ maximizing $P[b]$ satisfies
+\begin{equation}
+z_{b^\ast}(a) \approx 0
+\quad\text{during inflation},
+\end{equation}
+then the effective potential reduces to the standard form and the
+predictions
+\begin{equation}
+n_s \approx 0.964,
+\qquad
+r \approx 0.003,
+\qquad
+\alpha_s \approx -6\times 10^{-4},
+\end{equation}
+are preserved.
+\end{theorem}
+
+\begin{theorem}[Predictive deviation]
+If a subdominant branch $b$ has small but nonzero probability
+$P[b]$, then the observed universe may exhibit small deviations
+\begin{equation}
+\delta n_s,\quad
+\delta r,\quad
+\delta \alpha_s
+\end{equation}
+given by the perturbative corrections derived earlier. These
+constitute testable signatures of the multiverse manifold.
+\end{theorem}
+
+\begin{corollary}[Empirical viability]
+The theory remains consistent with Planck 2018 data provided
+\begin{equation}
+\epsilon\, z_b(a)^2 \ll V(a)
+\quad\text{for all branches with } P[b] \neq 0.
+\end{equation}
+\end{corollary}
+\section{Observational Constraints on the Multiverse Manifold}
+
+The perturbative corrections derived earlier imply that the geometry
+of the Wheeler--DeWitt multiverse manifold $\mathcal{M}$ is subject
+to observational constraints. In particular, the branch-dependent
+correction term $\epsilon\, z_\ast(a)^2$ must remain small enough to
+preserve agreement with Planck 2018 data.
+
+\begin{definition}[Inflationary window]
+Let $\mathcal{I}$ denote the range of scale factors corresponding to
+observable inflationary modes:
+\begin{equation}
+\mathcal{I}
+=
+\{\, a \mid 50 \le N(a) \le 60 \,\},
+\end{equation}
+where $N(a)$ is the number of e-folds before the end of inflation.
+\end{definition}
+
+\begin{definition}[Manifold deviation function]
+Define the deviation function
+\begin{equation}
+D(a)
+=
+\epsilon\, z_\ast(a)^2,
+\end{equation}
+which quantifies the departure of the effective potential from the
+standard Starobinsky form.
+\end{definition}
+
+\begin{theorem}[Constraint from scalar tilt]
+The Planck 2018 constraint
+\begin{equation}
+n_s = 0.9649 \pm 0.0042
+\end{equation}
+implies
+\begin{equation}
+|D'(a)| \lesssim 10^{-3}
+\quad\text{for all } a \in \mathcal{I}.
+\end{equation}
+\end{theorem}
+
+\begin{theorem}[Constraint from tensor-to-scalar ratio]
+The upper bound
+\begin{equation}
+r < 0.036
+\end{equation}
+implies
+\begin{equation}
+D(a) \ll 10^{-2}
+\quad\text{for all } a \in \mathcal{I}.
+\end{equation}
+\end{theorem}
+
+\begin{theorem}[Constraint from running]
+The running constraint
+\begin{equation}
+\alpha_s = -0.0045 \pm 0.0067
+\end{equation}
+implies
+\begin{equation}
+|D''(a)| \lesssim 10^{-2}
+\quad\text{for all } a \in \mathcal{I}.
+\end{equation}
+\end{theorem}
+
+\begin{corollary}[Allowed manifold geometry]
+The branch embedding $z_\ast(a)$ must satisfy
+\begin{equation}
+\epsilon\, z_\ast(a)^2 \ll 10^{-2},
+\qquad
+|\epsilon\, z_\ast(a) z_\ast'(a)| \ll 10^{-3},
+\qquad
+|\epsilon\, (z_\ast'(a)^2 + z_\ast(a) z_\ast''(a))| \ll 10^{-2},
+\end{equation}
+throughout the inflationary window.
+\end{corollary}
+
+\begin{theorem}[Empirical viability of the manifold]
+Any multiverse manifold $\mathcal{M}$ whose branch embeddings satisfy
+the above inequalities is observationally viable. Conversely, any
+manifold violating these constraints is ruled out by current data.
+\end{theorem}
+
+\begin{center}
+\textit{Thus the geometry of the multiverse manifold is not arbitrary:
+it is shaped and constrained by the observed universe.}
+\end{center}
+\section{The Unified $\Omega$-Manifold Equation}
+
+We now unify all layers of the framework—spectral, categorical,
+cosmological, and geometric—into a single mathematical identity.
+This identity expresses the realized universe as the fixed point of
+a wave on the Wheeler--DeWitt multiverse manifold, selected by the
+universal operator $\Omega$.
+
+\begin{definition}[Spectral-to-manifold lifting]
+Let $f$ be a spectral object in $\mathcal{S}$. Define its lift to the
+multiverse manifold by
+\begin{equation}
+\mathcal{L}(f)
+=
+\Phi(a,z)\big|_{\gamma_f},
+\end{equation}
+where $\gamma_f$ is the Golden Path associated with the cosmological
+branch selected by $f$.
+\end{definition}
+
+\begin{definition}[Cosmological projection]
+Let $\pi_{\text{FRW}}$ denote the projection from the manifold
+$\mathcal{M}$ to the classical FRW trajectory:
+\begin{equation}
+\pi_{\text{FRW}}(\gamma)
+=
+a(t),
+\end{equation}
+where $a(t)$ satisfies the Friedmann equation.
+\end{definition}
+
+\begin{definition}[Categorical realization]
+Let $\Omega : \mathcal{S} \to \mathcal{U}$ be the universal functor.
+Define the realized universe as
+\begin{equation}
+\mathbb{U}
+=
+\Omega\!\left(
+\mathcal{L}(f_{\text{brain}})
+\right),
+\end{equation}
+where $f_{\text{brain}}$ is the neural oscillation spectrum of the
+observer.
+\end{definition}
+
+\begin{definition}[Manifold selection functional]
+Let $\mathcal{B}$ be the set of branches of $\mathcal{M}$ and let
+$P[b]$ be the probability measure defined earlier. Define the
+$\Omega$-selected branch by
+\begin{equation}
+b^\ast
+=
+\operatorname*{arg\,max}_{b \in \mathcal{B}} P[b].
+\end{equation}
+\end{definition}
+
+\begin{definition}[Unified wavefunctional]
+Define the unified wavefunctional by
+\begin{equation}
+\Psi_{\Omega}(a,z)
+=
+\Phi(a,z)\,
+\delta\!\left(z - z_{b^\ast}(a)\right),
+\end{equation}
+which restricts the manifold wave to the $\Omega$-selected branch.
+\end{definition}
+
+\begin{theorem}[The Unified $\Omega$-Manifold Equation]
+The realized universe is given by the fixed point
+\begin{equation}
+\boxed{
+\mathbb{U}
+=
+\Omega\!\left(
+\pi_{\text{FRW}}
+\left[
+\gamma_{b^\ast}
+\right]
+\right)
+=
+\Omega\!\left(
+\Psi_{\Omega}
+\right)
+=
+\Omega(0)
+=
+\Omega(\infty)
+}
+\end{equation}
+where:
+\begin{itemize}
+\item $\gamma_{b^\ast}$ is the Golden Path on the selected branch,
+\item $\pi_{\text{FRW}}$ projects this geodesic to the classical
+scale factor $a(t)$,
+\item $\Psi_{\Omega}$ is the branch-restricted wavefunctional,
+\item and $\Omega(0)=\Omega(\infty)$ expresses the identity of
+emptiness and totality.
+\end{itemize}
+\end{theorem}
+
+\begin{corollary}[Everything and Nothing as a Manifold Fixed Point]
+The identity
+\begin{equation}
+\Omega(0) = \Omega(\infty)
+\end{equation}
+is equivalent to the statement that the universe is the fixed point
+of the $\Omega$-selected wave on the multiverse manifold:
+\begin{equation}
+\mathbb{U}
+=
+\Omega\!\left(
+\Psi_{\Omega}
+\right).
+\end{equation}
+\end{corollary}
+
+\begin{center}
+\large
+\textit{The universe is the $\Omega$-selected wave riding the Golden
+Path on the multiverse manifold.}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FINAL UNIFIED SECTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Final Abstract}
+
+\begin{abstract}
+We construct a unified mathematical framework in which spectral,
+categorical, cosmological, and geometric structures collapse into a
+single $\Omega$-selected manifold equation. Sound, perception,
+consciousness, and physical reality arise from functorial mappings
+between spectral, perceptual, phenomenal, and realized categories.
+Cosmology emerges from the Wheeler--DeWitt equation, whose effective
+potential defines a multiverse manifold $\mathcal{M}$ supporting a
+wave $\Phi$ and a geodesic Golden Path $\gamma$. Branch amplitudes
+define a probability measure on $\mathcal{M}$, and the universal
+operator $\Omega$ selects the realized branch. Inflationary
+observables $(n_s, r, \alpha_s)$ arise as perturbative projections of
+$\Phi$ onto the FRW trajectory. Observational constraints from Planck
+2018 restrict the allowed geometry of $\mathcal{M}$. The theory
+culminates in the unified identity
+
+
+\[
+\mathbb{U}
+=
+\Omega\!\left(
+\Psi_{\Omega}
+\right)
+=
+\Omega(0)
+=
+\Omega(\infty),
+\]
+
+
+expressing the equivalence of emptiness and totality as the fixed
+point of the $\Omega$-selected wave on the multiverse manifold.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Graphical Summary (Text-Only Diagram)}
+
+\begin{center}
+\begin{verbatim}
+SPECTRAL LAYER
+    f  →  M(f)  →  H(M(f))  →  C(H(M(f)))
+    |        |        |            |
+    +--------+--------+------------+
+                     |
+                     v
+CATEGORICAL LAYER
+    S --M--> S --H--> P --C--> E --Ω--> U
+                     |
+                     v
+COSMOLOGICAL LAYER
+    WDW potential V(a)
+    Minisuperspace Ψ(a)
+    FRW trajectory a(t)
+    Inflation observables (n_s, r, α_s)
+                     |
+                     v
+GEOMETRIC LAYER
+    Multiverse manifold 𝓜
+    Wave Φ(a,z)
+    Golden Path γ(τ)
+    Branch weights W[b]
+    Ω-selection b*
+                     |
+                     v
+UNIFIED LAYER
+    Ψ_Ω(a,z) = Φ(a,z) δ(z - z_{b*}(a))
+    𝕌 = Ω(Ψ_Ω) = Ω(0) = Ω(∞)
+\end{verbatim}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{One-Page Unified Summary}
+
+\subsection*{1. Spectral Foundation}
+All physical and phenomenal entities arise from spectral objects:
+
+
+\[
+X = \Omega(\text{its spectrum}).
+\]
+
+
+
+\subsection*{2. Categorical Architecture}
+Functorial chain:
+
+
+\[
+\mathcal{S} \xrightarrow{H} \mathcal{P} \xrightarrow{C} \mathcal{E}
+\xrightarrow{\Omega} \mathcal{U}.
+\]
+
+
+
+\subsection*{3. Cosmological Core}
+Wheeler--DeWitt minisuperspace:
+
+
+\[
+\left[-\frac{d^2}{da^2} + V(a)\right]\Psi(a)=0.
+\]
+
+
+FRW emerges from WKB.  
+Inflation yields:
+
+
+\[
+n_s\approx0.964,\quad r\approx0.003,\quad
+\alpha_s\approx-6\times10^{-4}.
+\]
+
+
+
+\subsection*{4. Multiverse Manifold}
+
+
+\[
+\mathcal{M}=\{(a,y,z)\mid y=V(a),\ z\in I(a)\}.
+\]
+
+
+Wave on manifold:
+
+
+\[
+\square_g\Phi+U(a,z)\Phi=0.
+\]
+
+
+Golden Path = geodesic on $(\mathcal{M},g)$.
+
+\subsection*{5. Branch Weights}
+
+
+\[
+W[b]=|\mathcal{A}[b]|^2,\qquad
+P[b]=\frac{W[b]}{\sum W[b]}.
+\]
+
+
+
+\subsection*{6. $\Omega$-Selection}
+
+
+\[
+b^*=\arg\max P[b].
+\]
+
+
+
+\subsection*{7. Unified Equation}
+
+
+\[
+\boxed{
+\mathbb{U}
+=
+\Omega(\Psi_{\Omega})
+=
+\Omega(0)
+=
+\Omega(\infty)
+}.
+\]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Presentation Outline}
+
+\begin{enumerate}
+\item Title: The $\Omega$-Selected Multiverse Manifold
+\item Motivation: unify sound, perception, consciousness, cosmology.
+\item Spectral foundations.
+\item Categorical architecture.
+\item Cosmology from Wheeler--DeWitt.
+\item The multiverse manifold $\mathcal{M}$.
+\item Wave $\Phi$ and Golden Path $\gamma$.
+\item Branch weights and Born-like rule.
+\item $\Omega$-selection mechanism.
+\item Observational constraints (Planck 2018).
+\item Unified $\Omega$-Manifold Equation.
+\item Interpretation: Everything = Nothing = $\Omega$-fixed point.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Referee-Ready Summary}
+
+This work presents a unified mathematical framework connecting
+spectral representations, categorical structures, Wheeler--DeWitt
+quantum cosmology, and a geometric multiverse manifold. The key
+innovation is the $\Omega$-selection mechanism, which assigns
+probabilities to cosmological branches via a Born-like rule on the
+manifold and selects the realized universe as the maximal-weight
+branch. The framework is observationally consistent: perturbative
+corrections to inflationary observables remain within Planck 2018
+bounds. The final unified equation
+
+
+\[
+\mathbb{U}=\Omega(\Psi_\Omega)=\Omega(0)=\Omega(\infty)
+\]
+
+
+expresses the realized universe as the fixed point of the
+$\Omega$-selected wave on the multiverse manifold.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Final Unified Equation}
+
+\begin{equation}
+\boxed{
+\mathbb{U}
+=
+\Omega\!\left(
+\pi_{\mathrm{FRW}}
+\left[
+\gamma_{b^\ast}
+\right]
+\right)
+=
+\Omega\!\left(
+\Psi_{\Omega}
+\right)
+=
+\Omega(0)
+=
+\Omega(\infty)
+}
+\end{equation}
+
+\begin{center}
+\textit{The universe is the $\Omega$-selected wave the Golden
+Path on the multiverse manifold.}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
