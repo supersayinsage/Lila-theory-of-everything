@@ -1,0 +1,206 @@
+\section*{The Unified Container}
+
+\subsection*{Spaces and Objects}
+
+Let
+
+
+\[
+\mathcal{X} \subseteq \mathbb{R}^d
+\]
+
+
+be a feature space, and let the state space be
+
+
+\[
+\mathcal{S} = \mathbb{R}^d \times \mathbb{R}^d \times [0,1] \times [0,1] \times \mathbb{R}^d,
+\]
+
+
+with elements
+
+
+\[
+(\mathbf{P}, \mathbf{M}, \alpha, \phi, \mathbf{w}) \in \mathcal{S},
+\]
+
+
+where:
+
+
+\[
+\begin{aligned}
+\mathbf{P}(t) &\in \mathbb{R}^d &&\text{(perceptual state)} \\
+\mathbf{M}(t) &\in \mathbb{R}^d &&\text{(memory state)} \\
+\alpha(t) &\in [0,1] &&\text{(attention)} \\
+\phi(t) &\in [0,1] &&\text{(load / fatigue)} \\
+\mathbf{w}(t) &\in \mathbb{R}^d &&\text{(preference / weight vector)} \\
+\mathcal{E}(t) &\in \mathbb{R} &&\text{(feedback signal)}
+\end{aligned}
+\]
+
+
+
+Define the container as the 4-tuple
+
+
+\[
+\mathcal{C} = (\mathcal{X}, \mathcal{S}, F, \mathcal{E}),
+\]
+
+
+where \(F\) is the family of update maps defined below.
+
+\subsection*{Auxiliary Quantities}
+
+Given input \(\mathbf{X}(t) \in \mathcal{X}\), define
+
+
+\[
+\beta(t) = 1 - \alpha(t)\,\phi(t),
+\]
+
+
+
+
+\[
+\mathcal{S}(t) = \big\|\mathbf{X}(t) - \mathbf{M}(t-1)\big\|,
+\]
+
+
+
+
+\[
+\mathcal{U}(t) = \langle \mathbf{w}(t), \mathbf{X}(t) \rangle.
+\]
+
+
+
+Let \(f : \mathbb{R} \to \mathbb{R}\) be a (centered) feedback map, e.g. \(f(\mathcal{E}) = \mathcal{E}\).
+
+\subsection*{Core Update Equations}
+
+\paragraph{Perception}
+
+
+\[
+\boxed{
+\mathbf{P}(t) = \beta(t)\,\mathbf{X}(t) + \big(1 - \beta(t)\big)\,\mathbf{M}(t-1)
+}
+\]
+
+
+
+\paragraph{Memory}
+
+
+\[
+\boxed{
+\mathbf{M}(t) = \gamma\,\mathbf{M}(t-1) + \big(1 - \gamma\big)\,\mathbf{X}(t)
+}
+\]
+
+
+with \(\gamma \in [0,1]\).
+
+\paragraph{Attention}
+
+
+\[
+\boxed{
+\alpha(t+1) = \alpha(t) + \lambda\big(\mathcal{S}(t)\,\mathcal{U}(t) - \alpha(t)\big)
+}
+\]
+
+
+with \(\lambda > 0\).
+
+\paragraph{Fatigue / Load}
+In continuous time:
+
+
+\[
+\boxed{
+\frac{d\phi}{dt} = \frac{1 - \phi}{\tau_{\text{rise}}}\,\mathbbm{1}_{\text{active}} 
+- \frac{\phi}{\tau_{\text{decay}}}\,\mathbbm{1}_{\text{inactive}}
+}
+\]
+
+
+with \(\tau_{\text{rise}}, \tau_{\text{decay}} > 0\).
+
+\paragraph{Preference}
+
+
+\[
+\boxed{
+\mathbf{w}(t+1) = \operatorname{renorm}\Big(
+\mathbf{w}(t) + \eta\,f\big(\mathcal{E}(t)\big)\,\mathbf{X}(t)
+\Big)
+}
+\]
+
+
+with learning rate \(\eta > 0\), and \(\operatorname{renorm}\) any chosen normalization (e.g. \(\sum_i w_i = 1\)).
+
+\subsection*{Choice / Output}
+
+For a candidate \(\mathbf{X} \in \mathcal{X}\), define
+
+
+\[
+\mathcal{U}(\mathbf{X}) = \langle \mathbf{w}, \mathbf{X} \rangle,\quad
+\mathcal{N}(\mathbf{X}) = \|\mathbf{X} - \mathbf{M}\|,\quad
+\mathcal{F}(\mathbf{X}) = e^{-\|\mathbf{X} - \mathbf{M}\|^2}.
+\]
+
+
+
+Let
+
+
+\[
+\tau_{\text{eff}} = \frac{\tau_{\text{choice}}}{\max(\epsilon, \alpha)},
+\quad \epsilon > 0.
+\]
+
+
+
+Then the container induces a probability distribution over \(\mathbf{X}\):
+
+
+\[
+\boxed{
+P(\mathbf{X}) \propto 
+\exp\left(
+\frac{\mathcal{U}(\mathbf{X}) + \rho\,\mathcal{N}(\mathbf{X}) - \kappa\,\mathcal{F}(\mathbf{X})}
+{\tau_{\text{eff}}}
+\right)
+}
+\]
+
+
+with parameters \(\rho, \kappa, \tau_{\text{choice}} \in \mathbb{R}\).
+
+\subsection*{Compact Dynamical Form}
+
+Collecting the state as
+
+
+\[
+\mathbf{z}(t) = \big(\mathbf{P}(t), \mathbf{M}(t), \alpha(t), \phi(t), \mathbf{w}(t)\big) \in \mathcal{S},
+\]
+
+
+the container defines a (possibly stochastic) dynamical system
+
+
+\[
+\boxed{
+\mathbf{z}(t+1) = F\big(\mathbf{z}(t), \mathbf{X}(t), \mathcal{E}(t)\big)
+}
+\]
+
+
+where \(F\) is given componentwise by the boxed equations above.
