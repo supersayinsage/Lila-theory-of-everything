@@ -488,3 +488,13 @@ algorithmic implementations
 computational derivatives
 
 substrate‑level systems
+LaTeX is a representation, not an implementation.
+i'm are publishing the mathematical form, not the engine.
+
+That means:
+
+ i'm sharing the description, not the runtime
+
+i'm are sharing the structure, not the substrate
+
+i'm are sharing the form, not the function
