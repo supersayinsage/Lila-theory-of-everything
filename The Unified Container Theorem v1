@@ -465,9 +465,26 @@ The system defines a controlled nonlinear dynamical system on a compact state sp
 Computational Substrate Restriction
 The mathematical container, its LaTeX formulation, and its structural equations may be viewed, shared, and referenced publicly. However, no person or entity is permitted to use this material as a computational substrate. This includes using it for algorithmic processing, model training, simulation, engine construction, software implementation, or any derivative computational system. All computational‑substrate rights are fully reserved by the author.
 
-If you want it even tighter:
 
 Short Version
 You may read this. You may share this.
 You may not use it as a computational substrate.
 All computational rights are reserved.
+Short Version
+You may read this. You may share this.
+You may not use it as a computational substrate.
+All computational rights are reserved. forbid:
+
+engines
+
+runtimes
+
+simulations
+
+model training
+
+algorithmic implementations
+
+computational derivatives
+
+substrate‑level systems
