@@ -201,6 +201,75 @@ the container defines a (possibly stochastic) dynamical system
 \mathbf{z}(t+1) = F\big(\mathbf{z}(t), \mathbf{X}(t), \mathcal{E}(t)\big)
 }
 \]
+\section*{Unified Container Theorem (Closed Form)}
 
+\subsection*{1. System Definition}
+
+Let \(d \in \mathbb{N}\) be fixed and let
+\[
+\mathcal{X} \subseteq \mathbb{R}^d
+\]
+be a compact feature space.
+
+Let the state space be
+\[
+\mathcal{S} \subseteq \mathbb{R}^{3d+2}
+\]
+with state
+\[
+z = (P, M, \alpha, \phi, w) \in \mathcal{S}.
+\]
+
+Define the Unified Container as the tuple
+\[
+\mathcal{C} = (\mathcal{X}, \mathcal{S}, F, G, \mathcal{E})
+\]
+where:
+\begin{itemize}
+    \item \(F: \mathcal{S} \times \mathcal{X} \times \mathbb{R} \to \mathcal{S}\) is a bounded update operator,
+    \item \(G: \mathcal{S} \to \mathcal{X}\) is a continuous output map,
+    \item \(\mathcal{E} \in \mathbb{R}\) is a bounded feedback signal.
+\end{itemize}
+
+The system evolves according to:
+\[
+z_{t+1} = F(z_t, X_t, E_t),
+\qquad
+Y_t = G(z_t).
+\]
+
+\subsection*{2. Embedding Assumption}
+
+Let \(D\) be any domain admitting a continuous embedding
+\[
+\iota: D \to \mathcal{X}
+\]
+such that \(\iota(D)\) is compact.
+
+\subsection*{3. Function Class Assumption}
+
+Assume \(F\) belongs to a class of operators dense in the space of continuous mappings on compact sets.
+
+\subsection*{4. Theorem}
+
+Let \(D_1, D_2 \subseteq \mathbb{R}^d\) be compact domains with embeddings into \(\mathcal{X}\).
+
+Then for any continuous mapping
+\[
+f: D_1 \to D_2
+\]
+and for any \(\varepsilon > 0\), there exists a configuration of \(\mathcal{C}\) such that the induced dynamics satisfy
+\[
+\| G(z_t) - \iota(f(x_t)) \| < \varepsilon
+\]
+for all \(x_t \in D_1\), under appropriate initialization \(z_0\).
+
+\subsection*{5. Corollary (Artistic Interpretation)}
+
+Any two continuously representable domains can be embedded into a shared state space such that their structures are connected by bounded dynamical evolution within the Unified Container.
+
+\subsection*{6. Closure}
+
+The Unified Container defines a bounded dynamical system over compact embedded domains, capable of approximating continuous transformations via internal state evolution and feedback-driven adaptation.
 
 where \(F\) is given componentwise by the boxed equations above.
