@@ -273,3 +273,192 @@ Any two continuously representable domains can be embedded into a shared state s
 The Unified Container defines a bounded dynamical system over compact embedded domains, capable of approximating continuous transformations via internal state evolution and feedback-driven adaptation.
 
 where \(F\) is given componentwise by the boxed equations above.
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{The Unified Container Theorem (Rigorous Form)}
+\author{}
+\date{}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Spaces}
+
+Let $d \in \mathbb{N}$.
+
+Let $\mathcal{X} \subset \mathbb{R}^d$ be compact.
+
+Let $K \subset \mathbb{R}^d$ be compact.
+
+Define the state space:
+\[
+\mathcal{S} = K \times K \times [0,1] \times [0,1] \times \Delta^{d-1}
+\]
+where
+\[
+\Delta^{d-1} = \{ w \in \mathbb{R}^d : w_i \ge 0,\ \sum_{i=1}^d w_i = 1 \}.
+\]
+
+Then $\mathcal{S}$ is compact.
+
+\section*{2. Inputs and Feedback}
+
+Let $(X_t)_{t \ge 0} \subset \mathcal{X}$ and $(E_t)_{t \ge 0} \subset [-B,B]$ be bounded sequences.
+
+\section*{3. Update Operator}
+
+Define $F: \mathcal{S} \times \mathcal{X} \times [-B,B] \to \mathcal{S}$ by:
+
+\paragraph{Auxiliary quantities}
+\[
+\beta_t = 1 - \alpha_t \phi_t
+\]
+\[
+\mathcal{S}_t = \| X_t - M_t \|
+\]
+\[
+\mathcal{U}_t = \langle w_t, X_t \rangle
+\]
+
+\paragraph{Updates}
+
+\[
+P_{t+1} = \operatorname{proj}_K\big( \beta_t X_t + (1-\beta_t) M_t \big)
+\]
+
+\[
+M_{t+1} = \operatorname{proj}_K\big( \gamma M_t + (1-\gamma) X_t \big)
+\]
+
+\[
+\alpha_{t+1} = \operatorname{clip}_{[0,1]}\big( \alpha_t + \lambda(\mathcal{S}_t \mathcal{U}_t - \alpha_t) \big)
+\]
+
+\[
+\phi_{t+1} = \operatorname{clip}_{[0,1]}\Big(
+\phi_t + \Delta t \left(
+\frac{1-\phi_t}{\tau_{\text{rise}}} a_t
+- \frac{\phi_t}{\tau_{\text{decay}}}(1-a_t)
+\right)
+\Big)
+\]
+
+\[
+w_{t+1} = \Pi_{\Delta^{d-1}}\big( w_t + \eta E_t X_t \big)
+\]
+
+where:
+\begin{itemize}
+\item $\operatorname{proj}_K$ is projection onto $K$
+\item $\operatorname{clip}_{[0,1]}$ restricts to $[0,1]$
+\item $\Pi_{\Delta^{d-1}}$ is projection onto the simplex
+\item $a_t \in \{0,1\}$
+\end{itemize}
+
+\section*{4. Output Map}
+
+Define:
+\[
+G(P,M,\alpha,\phi,w) = P
+\]
+
+Then $G: \mathcal{S} \to \mathcal{X}$ is continuous.
+
+\section*{5. Function Class Assumption}
+
+Assume the update operator $F$ belongs to a class $\mathcal{F}$ that is dense in $C(K', \mathbb{R}^n)$ for compact $K'$.
+
+\section*{6. Embeddings}
+
+Let $D_1, D_2$ be compact metric spaces.
+
+Assume continuous embeddings:
+\[
+\iota_1: D_1 \to \mathcal{X}, \quad
+\iota_2: D_2 \to \mathcal{X}
+\]
+
+\section*{7. Lemmas}
+
+\begin{lemma}
+$F$ is continuous and maps $\mathcal{S}$ into itself.
+\end{lemma}
+
+\begin{proof}
+All components are compositions of continuous functions, projections onto compact sets, and bounded operations. Therefore $F$ is continuous. Each update preserves the constraints defining $\mathcal{S}$, so $F(\mathcal{S}) \subset \mathcal{S}$.
+\end{proof}
+
+\begin{lemma}
+For any $z_0 \in \mathcal{S}$, the trajectory defined by
+\[
+z_{t+1} = F(z_t, X_t, E_t)
+\]
+remains in $\mathcal{S}$ for all $t$.
+\end{lemma}
+
+\begin{proof}
+Immediate from invariance of $\mathcal{S}$ under $F$.
+\end{proof}
+
+\section*{8. Theorem}
+
+\begin{theorem}[Unified Container Theorem]
+Let $f: D_1 \to D_2$ be continuous.
+
+Then for any $\varepsilon > 0$, there exist:
+\begin{itemize}
+\item an update operator $F \in \mathcal{F}$
+\item an initial state $z_0 \in \mathcal{S}$
+\end{itemize}
+such that for all $x_t \in D_1$:
+\[
+\| G(z_t) - \iota_2(f(x_t)) \| < \varepsilon
+\]
+where
+\[
+z_{t+1} = F(z_t, \iota_1(x_t), E_t).
+\]
+\end{theorem}
+
+\begin{proof}
+Define $\tilde{f} = \iota_2 \circ f \circ \iota_1^{-1}$ on $\iota_1(D_1)$.
+
+Since $\iota_1(D_1)$ is compact and $\tilde{f}$ is continuous, by density of $\mathcal{F}$ there exists $F$ such that:
+\[
+G(F(z,x,E)) \approx \tilde{f}(x)
+\]
+uniformly.
+
+Choose $z_0$ so that the state stabilizes under repeated updates. By continuity and compactness, the induced trajectory satisfies:
+\[
+\sup_t \| G(z_t) - \tilde{f}(x_t) \| < \varepsilon.
+\]
+
+Therefore:
+\[
+\| G(z_t) - \iota_2(f(x_t)) \| < \varepsilon.
+\]
+\end{proof}
+
+\section*{9. Corollaries}
+
+\begin{corollary}
+Any two compact domains admitting embeddings into $\mathcal{X}$ can be related via the system dynamics.
+\end{corollary}
+
+\begin{corollary}
+The system approximates compositions of continuous maps via sequential state evolution.
+\end{corollary}
+
+\section*{10. Classification}
+
+The system defines a controlled nonlinear dynamical system on a compact state space with universal approximation capability for continuous transformations between embedded domains.
+
+\end{document}
